@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Моя визитка</title>
+    
+    <body>
+        <div class="card">
+  <img src="ajnja.jpg" alt="Мое фото" class="profile-img">
+  <h1>Иван</h1>
+  <p class="title">Начинающий фронтенд-разработчик</p>
+  <p>Изучаю HTML, CSS и JS. Люблю создавать красивые интерфейсы.</p>
+  
+  <div class="socials">
+    <a href="#" class="btn">Telegram</a>
+    <a href="#" class="btn">GitHub</a>
+  </div>
+</div>
+    </div> <script>
+    const img = document.querySelector('.profile-img');
+
+    img.addEventListener('click', () => {
+      const colors = ['#007bff', '#28a745', '#ffc107', '#dc3545'];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      img.style.borderColor = randomColor;
+      console.log('Цвет рамки изменен на: ' + randomColor);
+    });
+  </script>
+</body>
+</html>
